@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Pintada, Antioquia - El Emporio Turístico de Antioquia</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://turismoantioquia.travel/wp-content/uploads/2022/04/LaPintada3-.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.8s ease-in;
+        }
+        .animate-slideUp {
+            animation: slideUp 0.8s ease-out;
+        }
+        .animate-slideRight {
+            animation: slideRight 0.8s ease-out;
+        }
+        .animate-slideLeft {
+            animation: slideLeft 0.8s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes slideRight {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideLeft {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .overlay {
+            background: rgba(0,0,0,0.7);
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #fbbf24;
+            transform: scale(1.05);
+        }
+        .section-padding {
+            padding: 4rem 0;
+        }
+        .image-container {
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+        .image-container img {
+            transition: transform 0.3s ease;
+        }
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50 animate-fadeIn">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-mountain text-2xl text-blue-600 mr-3"></i>
+                    <span class="text-xl font-bold text-gray-800">La Pintada</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="nav-link text-gray-700 hover:text-yellow-500 font-medium">Inicio</a>
+                    <a href="#historia" class="nav-link text-gray-700 hover:text-yellow-500 font-medium">Historia</a>
+                    <a href="#ubicacion" class="nav-link text-gray-700 hover:text-yellow-500 font-medium">Ubicación</a>
+                    <a href="#turismo" class="nav-link text-gray-700 hover:text-yellow-500 font-medium">Turismo</a>
+                    <a href="#gastronomia" class="nav-link text-gray-700 hover:text-yellow-500 font-medium">Gastronomía</a>
+                    <a href="#cultura" class="nav-link text-gray-700 hover:text-yellow-500 font-medium">Cultura</a>
+                    <a href="#leyendas" class="nav-link text-gray-700 hover:text-yellow-500 font-medium">Leyendas</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center relative">
+        <div class="text-center text-white animate-slideUp">
+            <h1 class="text-6xl font-bold mb-4 text-shadow">La Pintada</h1>
+            <h2 class="text-3xl font-light mb-6 text-shadow">Emporio Turístico de Antioquia</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto text-shadow">El municipio más joven de Antioquia, donde la historia y la naturaleza se encuentran a orillas del majestuoso río Cauca</p>
+            <div class="space-x-4">
+                <a href="#historia" class="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 rounded-full font-semibold transition duration-300 inline-block">
+                    <i class="fas fa-book mr-2"></i>Descubrir Historia
+                </a>
+                <a href="#turismo" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-gray-800 transition duration-300 inline-block">
+                    <i class="fas fa-camera mr-2"></i>Ver Atractivos
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Datos Principales -->
+    <section class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 text-center animate-slideUp">
+                <div class="card-hover bg-blue-50 p-6 rounded-lg">
+                    <i class="fas fa-users text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800">8,689</h3>
+                    <p class="text-gray-600">Habitantes</p>
+                </div>
+                <div class="card-hover bg-green-50 p-6 rounded-lg">
+                    <i class="fas fa-calendar-alt text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800">1997</h3>
+                    <p class="text-gray-600">Año de fundación como municipio</p>
+                </div>
+                <div class="card-hover bg-yellow-50 p-6 rounded-lg">
+                    <i class="fas fa-mountain text-4xl text-yellow-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800">600 m</h3>
+                    <p class="text-gray-600">Metros sobre el nivel del mar</p>
+                </div>
+                <div class="card-hover bg-purple-50 p-6 rounded-lg">
+                    <i class="fas fa-map text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800">55 km²</h3>
+                    <p class="text-gray-600">Extensión territorial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historia -->
+    <section id="historia" class="section-padding gradient-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 animate-slideUp">
+                <i class="fas fa-scroll mr-3"></i>Historia de La Pintada
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-slideRight">
+                    <div class="bg-white rounded-lg p-8 shadow-xl">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Los Orígenes</h3>
+                        <p class="text-gray-600 mb-4">La historia de La Pintada se remonta al año 1815, cuando comenzó como un asentamiento espontáneo de colonos. La región fue habitada ancestralmente por comunidades indígenas de las etnias Tahamíes, Quiramas, Armas, Catíos y Emberá, quienes vivían en organizaciones tipo cacicazgo hasta que en 1864 el gobierno autorizó la colonización del sector.</p>
+                        
+                        <h4 class="text-xl font-semibold text-gray-800 mb-3 mt-6">Desarrollo del Siglo XX</h4>
+                        <p class="text-gray-600 mb-4">En 1933 llegó el ferrocarril que uniría Antioquia con el Océano Pacífico, estableciendo la estación Alejandro López. Este desarrollo la convirtió en un centro neurálgico de las comunicaciones del occidente colombiano.</p>
+                        
+                        <h4 class="text-xl font-semibold text-gray-800 mb-3 mt-6">El Municipio Más Joven</h4>
+                        <p class="text-gray-600">La Pintada fue municipio entre enero de 1993 y marzo de 1994, pero el acto administrativo fue derogado. Finalmente, el 20 de marzo de 1997 fue creado nuevamente como municipio mediante ordenanza No. 42E, convirtiéndose en el municipio No. 125 de Antioquia y uno de los más jóvenes de Colombia.</p>
+                    </div>
+                </div>
+                
+                <div class="animate-slideLeft">
+                    <div class="image-container">
+                        <img src="https://puebliandoporantioquia.com.co/wp-content/uploads/2019/07/La-Pintada-Antioquia-iglesia-santa-cecilia-2.jpg" alt="Iglesia de Santa Cecilia" class="w-full h-96 object-cover rounded-lg shadow-lg">
+                    </div>
+                    <p class="text-white text-center mt-4 font-medium">Iglesia de Santa Cecilia, patrimonio arquitectónico del municipio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section id="ubicacion" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 animate-slideUp">
+                <i class="fas fa-map-marker-alt mr-3"></i>Ubicación Geográfica
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-slideRight">
+                    <div class="image-container">
+                        <img src="https://puebliandoporantioquia.com.co/wp-content/uploads/2025/03/PANORAMICA-LA-PINTADA-B-2-1.jpg" alt="Vista panorámica de La Pintada" class="w-full h-96 object-cover rounded-lg shadow-lg">
+                    </div>
+                    <p class="text-gray-600 text-center mt-4 font-medium">Vista panorámica del municipio de La Pintada</p>
+                </div>
+                
+                <div class="animate-slideLeft">
+                    <div class="bg-gray-50 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Posición Estratégica</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-compass mr-2 text-blue-600"></i>Coordenadas
+                            </h4>
+                            <p class="text-gray-600">5°44'31"N 75°36'19"O</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-border-style mr-2 text-green-600"></i>Límites
+                            </h4>
+                            <ul class="text-gray-600 space-y-1">
+                                <li><strong>Norte:</strong> Fredonia y Santa Bárbara</li>
+                                <li><strong>Oriente:</strong> Santa Bárbara</li>
+                                <li><strong>Sur:</strong> Valparaíso, Caramanta y Caldas</li>
+                                <li><strong>Occidente:</strong> Valparaíso, Fredonia y Támesis</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-road mr-2 text-yellow-600"></i>Acceso
+                            </h4>
+                            <p class="text-gray-600 mb-2">Distancia a Medellín: 72 km (2h 18min)</p>
+                            <p class="text-gray-600">Punto estratégico con acceso directo a tres capitales departamentales: Medellín, Manizales y Pereira.</p>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <p class="text-blue-800 font-medium">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                La Pintada es conocida como "La Puerta de Antioquia" por su posición estratégica como punto de paso obligatorio hacia el occidente colombiano.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Turismo -->
+    <section id="turismo" class="section-padding bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 animate-slideUp">
+                <i class="fas fa-camera mr-3"></i>Atractivos Turísticos
+            </h2>
+            
+            <!-- Puentes -->
+            <div class="mb-16">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="animate-slideRight">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Puentes sobre el Río Cauca</h3>
+                        <p class="text-gray-600 mb-4">Los icónicos puentes de La Pintada constituyen uno de sus principales atractivos turísticos. El "puente viejo", en particular, ofrece una vista espectacular del río Cauca, el segundo más caudaloso de Colombia después del Magdalena.</p>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h4 class="text-xl font-semibold text-gray-800 mb-3">
+                                <i class="fas fa-bridge-water mr-2 text-blue-600"></i>Características Principales
+                            </h4>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• Conexión entre ambas márgenes del río</li>
+                                <li>• Configuración paisajística única</li>
+                                <li>• Punto fotográfico emblemático</li>
+                                <li>• Historia ferroviaria de la región</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="animate-slideLeft">
+                        <div class="image-container">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Puentes_en_La_Pintada_02.jpg" alt="Puentes de La Pintada" class="w-full h-96 object-cover rounded-lg shadow-lg">
+                        </div>
+                        <p class="text-gray-600 text-center mt-4 font-medium">Vista del casco urbano y los puentes sobre el río Cauca</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Grid de Atractivos -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-hover bg-white rounded-lg shadow-lg overflow-hidden animate-slideUp">
+                    <div class="image-container">
+                        <img src="https://puebliandoporantioquia.com.co/wp-content/uploads/2025/03/CERRO-LOS-FARALLONES-1-A.jpg" alt="Cerro Los Farallones" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Cerro Los Farallones</h4>
+                        <p class="text-gray-600 mb-4">Ideal para la práctica del parapentismo y observación de petroglifos dejados por las tribus indígenas que habitaban estos territorios.</p>
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-hover bg-white rounded-lg shadow-lg overflow-hidden animate-slideUp">
+                    <div class="image-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Puentes_en_La_Pintada_01.jpg/2560px-Puentes_en_La_Pintada_01.jpg" alt="Río Cauca" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Balnearios del Río Cauca</h4>
+                        <p class="text-gray-600 mb-4">Espacios naturales para disfrutar de las aguas del río más importante de la región, con zonas de recreación familiar.</p>
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="far fa-star mr-1"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-hover bg-white rounded-lg shadow-lg overflow-hidden animate-slideUp">
+                    <div class="image-container">
+                        <img src="https://seecolombia.travel/blog/wp-content/uploads/2021/08/la-pintada-antioquia-more-than-just-pools-and-farms-4-1024x768.jpg" alt="Hostería Farallones" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Hostería Farallones</h4>
+                        <p class="text-gray-600 mb-4">Lugar rodeado de grandes paisajes, espacios de recreación y caminatas ecológicas, ideal para pasar un día en familia.</p>
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lugares Adicionales -->
+            <div class="mt-12 bg-white rounded-lg p-8 shadow-lg animate-slideUp">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Otros Sitios de Interés</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-water text-blue-600 mr-3"></i>
+                                <span><strong>Vertientes de los ríos Poblanco y Arma</strong> - Nacimientos naturales</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-mountain text-green-600 mr-3"></i>
+                                <span><strong>Cerro Amarillo</strong> - Mirador natural con leyendas de tesoros</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-tint text-blue-500 mr-3"></i>
+                                <span><strong>El Salto del Caballo</strong> - Cascada natural</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-umbrella-beach text-yellow-600 mr-3"></i>
+                                <span><strong>Playa Acapulco</strong> - Zona recreativa del río</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-church text-purple-600 mr-3"></i>
+                                <span><strong>Iglesia de Santa Cecilia</strong> - Patrimonio arquitectónico</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-train text-gray-600 mr-3"></i>
+                                <span><strong>Estación Alejandro López</strong> - Historia ferroviaria</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-bridge text-brown-600 mr-3"></i>
+                                <span><strong>Puentes de Arma y Poblanco</strong> - Ruinas ferroviarias</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-cow text-green-500 mr-3"></i>
+                                <span><strong>Subasta de Ganados Asogans</strong> - Tradición ganadera</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gastronomía -->
+    <section id="gastronomia" class="section-padding gradient-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 animate-slideUp">
+                <i class="fas fa-utensils mr-3"></i>Gastronomía Pintadeña
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+                <div class="animate-slideRight">
+                    <div class="bg-white rounded-lg p-8 shadow-xl">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Sabores Tradicionales</h3>
+                        <p class="text-gray-600 mb-6">La gastronomía de La Pintada combina la tradición culinaria antioqueña con la riqueza de los productos del río Cauca y la región. Sus platos reflejan la cultura paisa con toques únicos del municipio.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-orange-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800 mb-2">
+                                    <i class="fas fa-drumstick-bite mr-2 text-orange-600"></i>Sancocho de Gallina
+                                </h4>
+                                <p class="text-gray-600 text-sm">Plato emblemático cocinado en fogón de leña, con gallina criada en el campo, plátano verde y yuca. Preparación tradicional que conserva los sabores ancestrales.</p>
+                            </div>
+                            
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800 mb-2">
+                                    <i class="fas fa-fish mr-2 text-blue-600"></i>Torta de Pescado
+                                </h4>
+                                <p class="text-gray-600 text-sm">Especialidad reconocida a nivel regional, elaborada con pescados frescos del río Cauca. Un plato que representa la identidad gastronómica local.</p>
+                            </div>
+                            
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800 mb-2">
+                                    <i class="fas fa-soup mr-2 text-green-600"></i>Viudo de Pescado
+                                </h4>
+                                <p class="text-gray-600 text-sm">Sopa tradicional con pescado fresco, plátano, yuca y verduras de la región. Perfecto para el clima cálido del municipio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-slideLeft">
+                    <div class="image-container">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGVB_pSPDhSSUCneWKSmJhxZh42-nAu4iYzG0B4KatdRSrx_UR1yTBc1cVENurdcZEtw_rjYSd8Ezzzq-t9vMAyeE0zaxmYiOdUqF2X7cl6-Sq233KXKTDtj5RbxurGXIwu0H26OGWsuY/s1600/sancochoga.jpg" alt="Sancocho de gallina" class="w-full h-96 object-cover rounded-lg shadow-lg">
+                    </div>
+                    <p class="text-white text-center mt-4 font-medium">Sancocho de gallina, plato tradicional de La Pintada</p>
+                </div>
+            </div>
+            
+            <!-- Tradición Culinaria -->
+            <div class="bg-white rounded-lg p-8 shadow-xl animate-slideUp">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Tradición Culinaria Paisa</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <i class="fas fa-fire text-4xl text-red-600 mb-4"></i>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Fogón de Leña</h4>
+                        <p class="text-gray-600">Los platos tradicionales se preparan en fogón de leña, conservando el sabor auténtico y los métodos ancestrales de cocción.</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-seedling text-4xl text-green-600 mb-4"></i>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Productos Locales</h4>
+                        <p class="text-gray-600">Frutas tropicales, pescados de río, cítricos y productos agrícolas cultivados en la región enriquecen la mesa pintadeña.</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-heart text-4xl text-pink-600 mb-4"></i>
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Recetas Familiares</h4>
+                        <p class="text-gray-600">Las recetas se transmiten de generación en generación, preservando los secretos culinarios de las abuelas pintadeñas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultura -->
+    <section id="cultura" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 animate-slideUp">
+                <i class="fas fa-masks-theater mr-3"></i>Cultura y Tradiciones
+            </h2>
+            
+            <!-- Fiestas Principales -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div class="animate-slideRight">
+                    <div class="image-container">
+                        <img src="https://infolocal.comfenalcoantioquia.com/media/com_jbusinessdirectory/pictures/events/5664/fiestas_turismo_ganaderia01.jpg" alt="Fiestas del Turismo y la Ganadería" class="w-full h-96 object-cover rounded-lg shadow-lg">
+                    </div>
+                    <p class="text-gray-600 text-center mt-4 font-medium">Fiestas del Turismo y la Ganadería, celebración emblemática</p>
+                </div>
+                
+                <div class="animate-slideLeft">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6">Fiestas del Turismo y la Ganadería</h3>
+                    <p class="text-gray-600 mb-6">La celebración más importante de La Pintada se realiza anualmente en junio, específicamente del 19 al 22. Es una festividad que reúne a toda la comunidad y visitantes de la región en torno a la cultura, el turismo y la tradición ganadera.</p>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-4">
+                            <i class="fas fa-calendar-check mr-2 text-blue-600"></i>Programación Tradicional
+                        </h4>
+                        <ul class="space-y-2 text-gray-600">
+                            <li><i class="fas fa-music mr-2 text-green-600"></i>Presentaciones musicales y culturales</li>
+                            <li><i class="fas fa-trophy mr-2 text-yellow-600"></i>Concursos y competencias</li>
+                            <li><i class="fas fa-cow mr-2 text-brown-600"></i>Exposición y subasta ganadera</li>
+                            <li><i class="fas fa-utensils mr-2 text-red-600"></i>Muestras gastronómicas</li>
+                            <li><i class="fas fa-fireworks mr-2 text-purple-600"></i>Espectáculos pirotécnicos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Calendario Cultural -->
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-8 animate-slideUp">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Calendario Cultural Anual</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center card-hover">
+                        <i class="fas fa-birthday-cake text-3xl text-pink-600 mb-4"></i>
+                        <h4 class="font-bold text-gray-800 mb-2">Marzo</h4>
+                        <p class="text-gray-600 text-sm">Celebración del cumpleaños del municipio (16 de marzo)</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center card-hover">
+                        <i class="fas fa-cross text-3xl text-purple-600 mb-4"></i>
+                        <h4 class="font-bold text-gray-800 mb-2">Marzo/Abril</h4>
+                        <p class="text-gray-600 text-sm">Celebración de la Semana Santa con procesiones y actividades religiosas</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center card-hover">
+                        <i class="fas fa-music text-3xl text-green-600 mb-4"></i>
+                        <h4 class="font-bold text-gray-800 mb-2">Junio</h4>
+                        <p class="text-gray-600 text-sm">Festival de Bandas Sinfónicas y Fiestas del Turismo</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center card-hover">
+                        <i class="fas fa-graduation-cap text-3xl text-blue-600 mb-4"></i>
+                        <h4 class="font-bold text-gray-800 mb-2">Octubre</h4>
+                        <p class="text-gray-600 text-sm">Semana Cultural, Deportiva y de la Juventud</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tradiciones Especiales -->
+            <div class="mt-16 animate-slideUp">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Tradiciones Únicas</h3>
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-8 rounded-lg">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4">
+                        <i class="fas fa-bell mr-2 text-yellow-600"></i>El Topón de La Pintada
+                    </h4>
+                    <p class="text-gray-600 mb-4">Una de las tradiciones más auténticas y únicas de La Pintada es "El Topón", una fiesta religiosa sencilla y netamente campesina que se celebra el 25 de diciembre. Esta celebración navideña conserva las raíces culturales más profundas del municipio.</p>
+                    <p class="text-gray-600">Esta tradición, con más de 250 años de trayectoria, representa la identidad cultural pintadeña y la fusión de costumbres religiosas con el folclor rural de la región.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leyendas -->
+    <section id="leyendas" class="section-padding bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 animate-slideUp">
+                <i class="fas fa-ghost mr-3"></i>Mitos y Leyendas
+            </h2>
+            
+            <!-- Leyenda Principal -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div class="animate-slideRight">
+                    <div class="bg-gray-800 rounded-lg p-8 border border-gray-700">
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-400">
+                            <i class="fas fa-crown mr-2"></i>La Leyenda del Cacique Pipintá
+                        </h3>
+                        <p class="text-gray-300 mb-4">Una de las leyendas más profundas que ronda en la memoria histórica del municipio es la del Cacique Pipintá, figura mítica de quien algunos sostienen que La Pintada tomó su nombre.</p>
+                        
+                        <p class="text-gray-300 mb-4">Según la tradición oral, este cacique habría "enguacalado" (escondido) numerosos tesoros que nadie ha podido hallar pese a intensas búsquedas. La leyenda se mantiene viva en la memoria colectiva de la comunidad pintadeña.</p>
+                        
+                        <div class="bg-yellow-900 bg-opacity-50 p-4 rounded border-l-4 border-yellow-400">
+                            <p class="text-yellow-200 font-medium">
+                                <i class="fas fa-treasure-chest mr-2"></i>
+                                Los tesoros del Cacique Pipintá siguen siendo buscados por aventureros y curiosos, especialmente en las inmediaciones del Cerro Amarillo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-slideLeft">
+                    <div class="image-container relative">
+                        <img src="https://puebliandoporantioquia.com.co/wp-content/uploads/2025/03/CERRO-LOS-FARALLONES-1-A.jpg" alt="Cerro Los Farallones - Lugar místico" class="w-full h-96 object-cover rounded-lg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-lg"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <p class="text-white font-medium">Los Farallones, escenario de múltiples leyendas místicas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Otras Leyendas -->
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 animate-slideUp card-hover">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-tree text-4xl text-green-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-green-400">La Madremonte</h4>
+                    <p class="text-gray-300 text-sm">Ser mítico protector de la naturaleza que habita en las montañas y bosques de La Pintada. Se dice que castiga a quienes dañan el medio ambiente y premia a quienes lo cuidan.</p>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 animate-slideUp card-hover">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-drumstick-bite text-4xl text-red-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-red-400">El Pollo Maligno</h4>
+                    <p class="text-gray-300 text-sm">Criatura nocturna que aparece en forma de pollo gigante en los caminos solitarios. Los antiguos pobladores aseguran haberlo visto en las noches sin luna.</p>
+                </div>
+                
+                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 animate-slideUp card-hover">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-bell text-4xl text-yellow-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-yellow-400">Las Campanas de Los Farallones</h4>
+                    <p class="text-gray-300 text-sm">Sonido misterioso de campanas que se escucha en las noches desde los promontorios montañosos. Los habitantes creen que son las almas de los antiguos indígenas.</p>
+                </div>
+            </div>
+            
+            <!-- Herencia Indígena -->
+            <div class="bg-gradient-to-r from-purple-800 to-blue-800 rounded-lg p-8 animate-slideUp">
+                <h3 class="text-2xl font-bold mb-6 text-center text-yellow-300">
+                    <i class="fas fa-feather-alt mr-2"></i>Herencia Ancestral
+                </h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 text-yellow-200">
+                            <i class="fas fa-map mr-2"></i>Toponimias Indígenas
+                        </h4>
+                        <p class="text-gray-300 mb-4">En la memoria colectiva sobreviven nombres indígenas como Arma, Cartaza y Poblanco, que recuerdan la presencia de las etnias Tahamíes, Quiramas y Emberá.</p>
+                        
+                        <h4 class="text-lg font-semibold mb-3 text-yellow-200">
+                            <i class="fas fa-signature mr-2"></i>Apellidos Ancestrales
+                        </h4>
+                        <p class="text-gray-300">Apellidos como Quirama y Blandón mantienen viva la conexión con los antepasados indígenas de la región.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 text-yellow-200">
+                            <i class="fas fa-leaf mr-2"></i>Nostalgia Natural
+                        </h4>
+                        <p class="text-gray-300 mb-4">Se lamenta la pérdida de recursos naturales como bosques, nutrias (con cuya piel se fabricaron los famosos carrieles antioqueños) y otras especies.</p>
+                        
+                        <h4 class="text-lg font-semibold mb-3 text-yellow-200">
+                            <i class="fas fa-seedling mr-2"></i>Cultivos Perdidos
+                        </h4>
+                        <p class="text-gray-300">La comunidad recuerda con nostalgia la desaparición de los antiguos cultivos de tabaco, cacao y plátano que caracterizaron la región.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información Adicional -->
+    <section class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 animate-slideUp">
+                <i class="fas fa-info-circle mr-3"></i>Información Práctica
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Cómo Llegar -->
+                <div class="bg-blue-50 rounded-lg p-8 animate-slideUp card-hover">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-6">
+                        <i class="fas fa-route mr-2"></i>Cómo Llegar
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Vía Principal</h4>
+                            <p class="text-gray-600 text-sm">Medellín - Itagüí - Caldas - Versalles - Santa Bárbara - La Pintada</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Transporte Público</h4>
+                            <p class="text-gray-600 text-sm">Terminal del Sur: Transporte Farallones, Flota Occidental, S26</p>
+                            <p class="text-blue-600 font-medium">Precio: $15.000 - $25.000</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Peajes</h4>
+                            <p class="text-gray-600 text-sm">Primavera - Versalles: $14.200 aprox.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Economía -->
+                <div class="bg-green-50 rounded-lg p-8 animate-slideUp card-hover">
+                    <h3 class="text-2xl font-bold text-green-800 mb-6">
+                        <i class="fas fa-coins mr-2"></i>Economía Local
+                    </h3>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-lemon text-yellow-500 mr-3"></i>
+                            <span class="text-gray-700">Cultivos de cítricos</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-cow text-brown-500 mr-3"></i>
+                            <span class="text-gray-700">Ganadería</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-camera text-purple-500 mr-3"></i>
+                            <span class="text-gray-700">Turismo</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-fish text-blue-500 mr-3"></i>
+                            <span class="text-gray-700">Pesca</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-mountain text-gray-500 mr-3"></i>
+                            <span class="text-gray-700">Minería</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-store text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Comercio</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Datos Demográficos -->
+                <div class="bg-purple-50 rounded-lg p-8 animate-slideUp card-hover">
+                    <h3 class="text-2xl font-bold text-purple-800 mb-6">
+                        <i class="fas fa-users mr-2"></i>Datos Demográficos
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Población Total</h4>
+                            <p class="text-2xl font-bold text-purple-600">8,689 hab.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Composición</h4>
+                            <p class="text-gray-600">Urbana: 7,891 hab.</p>
+                            <p class="text-gray-600">Rural: 798 hab.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Densidad</h4>
+                            <p class="text-gray-600">157.98 hab./km²</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Gentilicio</h4>
+                            <p class="text-purple-600 font-medium">Pintadeño, -a</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Barrios y División -->
+            <div class="mt-12 bg-gray-50 rounded-lg p-8 animate-slideUp">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">División Administrativa</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-4">
+                            <i class="fas fa-home mr-2 text-blue-600"></i>14 Barrios del Casco Urbano
+                        </h4>
+                        <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                            <span>• Calle Vieja</span>
+                            <span>• El Crucero</span>
+                            <span>• San Miguel</span>
+                            <span>• El Kilómetro</span>
+                            <span>• Guayacanes</span>
+                            <span>• Barrio Colombia</span>
+                            <span>• Calle Central</span>
+                            <span>• Pueblo Nuevo</span>
+                            <span>• La Playa</span>
+                            <span>• San Jorge</span>
+                            <span>• El Carmelo</span>
+                            <span>• Víctor Sánchez</span>
+                            <span>• 13 de Junio</span>
+                            <span>• Santa Ana</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-4">
+                            <i class="fas fa-tree mr-2 text-green-600"></i>Zona Rural
+                        </h4>
+                        <p class="text-gray-600 mb-4">Una vereda: <strong>La Bocana</strong></p>
+                        
+                        <div class="bg-blue-100 p-4 rounded">
+                            <p class="text-blue-800 text-sm">
+                                <i class="fas fa-lightbulb mr-2"></i>
+                                <strong>Dato curioso:</strong> La Pintada es uno de los pocos municipios de Antioquia que no cuenta con corregimientos, solo tiene una vereda.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">
+                        <i class="fas fa-mountain mr-2 text-yellow-500"></i>La Pintada
+                    </h3>
+                    <p class="text-gray-300 text-sm">El emporio turístico de Antioquia, donde la historia y la naturaleza se encuentran a orillas del río Cauca.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <div class="space-y-2 text-sm text-gray-300">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>La Pintada, Antioquia, Colombia</p>
+                        <p><i class="fas fa-phone mr-2"></i>Alcaldía Municipal</p>
+                        <p><i class="fas fa-envelope mr-2"></i>información turística</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enlaces Útiles</h4>
+                    <div class="space-y-2 text-sm">
+                        <a href="#turismo" class="text-gray-300 hover:text-yellow-400 block">Atractivos Turísticos</a>
+                        <a href="#gastronomia" class="text-gray-300 hover:text-yellow-400 block">Gastronomía Local</a>
+                        <a href="#cultura" class="text-gray-300 hover:text-yellow-400 block">Eventos Culturales</a>
+                        <a href="#historia" class="text-gray-300 hover:text-yellow-400 block">Historia del Municipio</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Redes Sociales</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-yellow-400 text-xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-yellow-400 text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-yellow-400 text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-yellow-400 text-xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 La Pintada, Antioquia. Todos los derechos reservados. 
+                    <span class="text-yellow-500">Emporio Turístico de Antioquia</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'all 0.6s ease-out';
+            observer.observe(section);
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-white', 'shadow-lg');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-lg');
+            }
+        });
+
+        // Mobile menu functionality (if needed)
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) {
+                mobileMenu.classList.toggle('hidden');
+            }
+        }
+
+        // Add loading animation to images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+            });
+            img.style.opacity = '0';
+            img.style.transition = 'opacity 0.3s ease';
+        });
+
+        // Initialize first section as visible
+        document.querySelector('#inicio').style.opacity = '1';
+        document.querySelector('#inicio').style.transform = 'translateY(0)';
+    </script>
+</body>
+</html>
